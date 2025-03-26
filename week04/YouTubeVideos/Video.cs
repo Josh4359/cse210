@@ -15,11 +15,18 @@ public class Video
     float _length;
     public float GetLength() => _length;
 
-    public Video(string title, string author, float length, List<Comment> comments = null)
+    public Video(string title, string author, float length)
     {
         _title = title;
         _author = author;
         _length = length;
-        _comments = comments == null ? new() : comments;
+    }
+
+    public Video(string title, string author, float length, List<Comment> comments)
+    {
+        _title = title;
+        _author = author;
+        _length = length;
+        _comments = comments;
     }
 }
