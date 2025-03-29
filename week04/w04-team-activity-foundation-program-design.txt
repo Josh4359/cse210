@@ -1,0 +1,76 @@
+Some methods are marked as "optional" as they are not currently needed by other classes but may be in the future were this project to develop further.
+
+Youtube Videos:
+- Comment
+	Properties:
+	- string _author- author of the comment
+	- string _text- content of the comment
+	Methods:
+	- string GetAuthor()- getter for _author
+	- string GetText()- getter for _text
+- Video
+	Properties:
+	- List<Comment> _comments- list of comments
+	- string _title- title of the video
+	- string _author- author of the video
+	- float _length- length of the video
+	Methods:
+	- void AddComment()- add a comment
+	- List<Comment> GetComments()- getter for _comments
+	- int GetCommentCount()- getter for _comments.Count
+	- string GetTitle()- getter for _title
+	- string GetAuthor()- getter for _author
+	- float GetLength()- getter for _length
+
+Online Ordering:
+- Address
+	Properties:
+	- string _streetAddress- self-explanitory
+	- string _city- self-explanitory
+	- string _state- self-explanitory
+	- string _country- self-explanitory
+	Methods:
+	- string GetStreetAddress()- getter for _streetAddress (optional)
+	- string GetCity()- getter for _city (optional)
+	- string GetState()- getter for _state (optional)
+	- string GetCountry()- getter for _country (optional)
+	- bool InUSA()- check if _country == "USA"
+	- string GetFullAddress()- format and combine the full address into a single string
+- Customer
+	Properties:
+	- string _name- the name of the customer
+	- Address _address- the address of the customer
+	Methods:
+	- string GetName()- getter for _name
+	- Address GetAddress()- getter for _address
+	- bool InUSA()- returns _address.InUSA()
+- Order
+	Properties:
+	- List<Product> _products- list of products in the order
+	- Customer _customer- the customer of the order
+	Methods:
+	- List<Product> GetProducts()- getter for _products (optional)
+	- Customer GetCustomer()- getter for _customer (optional)
+	- float GetTotalCost()- calculate the total cost (subtotal + shipping)
+	- string GetPackingLabel()- format applicable order information into a packing label
+	- string GetShippingLabel()- format applicable order information into a shipping label
+	- void DisplayOrder()- prints the order to the console (could also be done in Program.cs, though this would reduce the number of public methods)
+- Product
+	Properties:
+	- _name- the name of the product
+	- _productId- the id of the product
+	- _price- the price of the product
+	- _quantity- the quantity of this product in the order
+	Methods
+	- GetName()- getter for _name
+	- GetProductId()- getter for _productId
+	- GetPrice()- getter for _price
+	- GetQuantity()- getter for _quantity
+	- GetTotalCost()- calculate _price * _quantity
+
+
+
+
+
+
+
